@@ -1,4 +1,4 @@
-const newQuoteBtn = document.getElementById('new-quote');
+//const newQuoteBtn = document.getElementById('new-quote');
 const quoteText = document.getElementById('quote');
 
 let apiQuotes = [
@@ -10,16 +10,19 @@ let apiQuotes = [
     "ihack{Tis_is_not_the_flag}",
     "Dear Humans, Hope you are still alive in the universe!",
     "I Love You - A computer virus :>",
-    "Cyber Security is not fun (Period)",
+    "Cyber Security is not fun",
 ];
 
 function getQuote() {
     console.log("quoted");
-    let quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    console.log(quote);
-    quoteText.textContent = quote;
+    for (let i = 0; i <= apiQuotes.length; i++){
+        let quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+        quoteText.textContent = quote;
+        location.reload
+    }
 }
 
 // New Quote click
-newQuoteBtn.addEventListener('click', getQuote);
+//var i = newQuoteBtn.addEventListener('click', getQuote);
+
 

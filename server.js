@@ -19,15 +19,15 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+app.get('/back', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'back.html'));
+});
+
 app.get('/flag', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'flag.html'));
 });
 
-app.get('/flag/back', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'back.html'));
-});
-
-app.get('/flag/back/give_me_the_flag', (req, res) => {
+app.get('/flag/key', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'ihack.html'));
 });
 
